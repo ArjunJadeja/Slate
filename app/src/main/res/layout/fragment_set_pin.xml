@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SetPinFragment">
+
+    <!-- Top app bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="@string/app_name" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Lock icon -->
+    <ImageView
+        android:id="@+id/lockIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:contentDescription="@string/lock_icon"
+        android:src="@drawable/ic_lock"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/validateUserTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Validating user text -->
+    <TextView
+        android:id="@+id/validateUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:text="@string/current_pin"
+        android:textSize="@dimen/font_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/validateUserEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Validating user input -->
+    <EditText
+        android:id="@+id/validateUserEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:ems="@integer/pin_input_ems"
+        android:gravity="center"
+        android:hint="@string/pin"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:maxLength="@integer/pin_length"
+        android:textSize="@dimen/font_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/submitValidationButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Submit Validation -->
+    <Button
+        android:id="@+id/submitValidationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Set pin text -->
+    <TextView
+        android:id="@+id/setPinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="@string/set_pin"
+        android:textSize="@dimen/font_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/setPinTextEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Set pin input -->
+    <EditText
+        android:id="@+id/setPinTextEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:ems="@integer/pin_input_ems"
+        android:gravity="center"
+        android:hint="@string/pin"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:maxLength="@integer/pin_length"
+        android:textSize="@dimen/font_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/confirmPinEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Confirm pin input -->
+    <EditText
+        android:id="@+id/confirmPinEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:ems="@integer/pin_input_ems"
+        android:gravity="center"
+        android:hint="@string/confirm_pin"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:maxLength="@integer/pin_length"
+        android:textSize="@dimen/font_medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/setPinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Set pin -->
+    <Button
+        android:id="@+id/setPinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Disable pin -->
+    <Button
+        android:id="@+id/disablePinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:backgroundTint="?colorError"
+        android:text="@string/disable_pin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setPinButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
