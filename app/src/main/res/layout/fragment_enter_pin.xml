@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.EnterPinFragment">
+
+    <!-- Lock icon -->
+    <ImageView
+        android:id="@+id/lockIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:contentDescription="@string/lock_icon"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintBottom_toTopOf="@+id/enterPinTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Enter pin text -->
+    <TextView
+        android:id="@+id/enterPinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:text="@string/enter_pin"
+        android:textSize="@dimen/font_medium"
+        app:layout_constraintBottom_toTopOf="@id/pinInputEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Pin input -->
+    <EditText
+        android:id="@+id/pinInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:ems="@integer/pin_input_ems"
+        android:gravity="center"
+        android:hint="@string/pin"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:maxLength="@integer/pin_length"
+        android:textSize="@dimen/font_medium"
+        app:layout_constraintBottom_toTopOf="@id/submitPinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <requestFocus />
+
+    </EditText>
+
+    <!-- Submit pin -->
+    <Button
+        android:id="@+id/submitPinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textSize="@dimen/font_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

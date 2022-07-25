@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- App info -->
+    <string name="app_name">Slate</string>
+    <string name="app_version">Version 1.0.0</string>
+
+    <!-- Top app bar -->
+    <string name="lock">lock</string>
+    <string name="about">about</string>
+
+    <!-- Add text -->
+    <string name="add_text">Add text</string>
+    <string name="whats_happening">Whats happening?</string>
+
+    <!-- Pin -->
+    <string name="pin">pin</string>
+    <string name="set_pin">Set Pin</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="current_pin">Current Pin</string>
+    <string name="confirm_pin">confirm pin</string>
+    <string name="disable_pin">Disable Pin</string>
+
+    <!-- Buttons text -->
+    <string name="submit">Submit</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+
+    <!-- Icons description -->
+    <string name="lock_icon">Lock icon</string>
+    <string name="app_icon">App icon</string>
+
+</resources>
