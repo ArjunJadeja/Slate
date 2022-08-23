@@ -9,6 +9,9 @@
     android:layout_marginStart="@dimen/margin_medium"
     android:layout_marginTop="@dimen/margin_medium"
     android:layout_marginEnd="@dimen/margin_medium"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="@dimen/corner"
     app:cardElevation="@dimen/elevation">
 
