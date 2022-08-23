@@ -5,6 +5,7 @@
 </p>
 
 
+
 ## Tech stack
 
 - [Kotlin](https://kotlinlang.org/) - Modern, concise and safe programming language.
@@ -23,13 +24,10 @@
 - [MVVM Architecture](https://developer.android.com/topic/architecture?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCYdinWTjLF0pkdfD6ZyjFwCOjjzX0m7l-tOgXWL-spDqHtFWLgNE80aAoi3EALw_wcB&gclsrc=aw.ds#recommended-app-arch) - MVVM architecture is a Model-View-ViewModel architecture that removes the tight coupling between each component.
 
 ## MAD Score
-
 ![summary](https://user-images.githubusercontent.com/81246797/181350240-6fad897a-a9ee-4f1c-a4ea-9517ac7d6320.png)
-
 
 ## Download
 Go to the [Releases](https://github.com/ArjunJadeja/Slate/releases) to download the latest APK.
-
 
 ## License
 ```xml
