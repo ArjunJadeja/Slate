@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.OnBackPressedCallback
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -15,7 +16,6 @@ import com.arjun.slate.databinding.FragmentMainScreenBinding
 import com.arjun.slate.utils.INotesRVAdapter
 import com.arjun.slate.utils.TextRVAdapter
 import com.arjun.slate.viewmodel.SharedViewModel
-import kotlin.system.exitProcess
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdapter {
 
@@ -75,7 +75,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
             viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
-                    exitProcess(0)
+                    finishAffinity(requireActivity())
                 }
             }
         )
