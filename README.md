@@ -4,7 +4,19 @@
 ✍️ Slate is an android app to store thoughts and memories in text form securely.
 </p>
 
+## Preview
 
+<p float="left">
+  <img src="assets/light_first.jpg" width="265" /> 
+  <img src="assets/light_second.jpg" width="265" />
+  <img src="assets/light_third.jpg" width="265" />
+</p>
+
+<p float="left">
+  <img src="assets/dark_first.jpg" width="265" /> 
+  <img src="assets/dark_second.jpg" width="265" />
+  <img src="assets/dark_third.jpg" width="265" />
+</p>
 
 ## Tech stack
 
