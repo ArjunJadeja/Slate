@@ -2,7 +2,8 @@
 <resources>
 
     <!--    Font size -->
-    <dimen name="font_small">16sp</dimen>
+    <dimen name="font_smaller">16sp</dimen>
+    <dimen name="font_small">18sp</dimen>
     <dimen name="font_medium">20sp</dimen>
 
     <!--    Margins -->

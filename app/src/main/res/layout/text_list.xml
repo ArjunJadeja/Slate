@@ -43,7 +43,7 @@
                 android:layout_weight="@integer/weight_equal"
                 android:gravity="start"
                 android:padding="@dimen/padding"
-                android:textSize="@dimen/font_small"
+                android:textSize="@dimen/font_smaller"
                 tools:text="10 min ago" />
 
             <Button
