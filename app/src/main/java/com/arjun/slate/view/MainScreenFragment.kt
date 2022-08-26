@@ -16,6 +16,7 @@ import com.arjun.slate.databinding.FragmentMainScreenBinding
 import com.arjun.slate.utils.INotesRVAdapter
 import com.arjun.slate.utils.TextRVAdapter
 import com.arjun.slate.viewmodel.SharedViewModel
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdapter {
 
@@ -43,7 +44,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
 
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
-                R.id.set_pin -> {
+                R.id.lock -> {
                     findNavController().navigate(R.id.action_mainScreenFragment_to_setPinFragment)
                     true
                 }
@@ -81,7 +82,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
         )
     }
 
-    override fun onItemClicked(text: Text) {
+    override fun shareTextClicked(text: Text) {
         val sendIntent: Intent = Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(Intent.EXTRA_TEXT, text.text)
@@ -89,5 +90,19 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
         }
         val shareIntent = Intent.createChooser(sendIntent, null)
         startActivity(shareIntent)
+    }
+
+    override fun deleteTextClicked(text: Text) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(resources.getString(R.string.delete_text))
+            .setMessage(resources.getString(R.string.delete_message))
+            .setNegativeButton(resources.getString(R.string.cancel)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setPositiveButton(resources.getString(R.string.delete)) { dialog, _ ->
+                sharedViewModel.deleteText(text)
+                dialog.dismiss()
+            }
+            .show()
     }
 }

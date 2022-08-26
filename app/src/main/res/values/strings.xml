@@ -5,12 +5,16 @@
     <string name="app_version">Version 1.0.0</string>
 
     <!-- Top app bar -->
-    <string name="lock">lock</string>
-    <string name="about">about</string>
+    <string name="lock">Lock</string>
+    <string name="about">About</string>
 
     <!-- Add text -->
     <string name="add_text">Add text</string>
     <string name="whats_happening">Whats happening?</string>
+
+    <!-- Delete text -->
+    <string name="delete_text">Delete text?</string>
+    <string name="delete_message">Text will be permanently deleted from your device</string>
 
     <!-- Pin -->
     <string name="pin">pin</string>
@@ -21,6 +25,8 @@
     <string name="disable_pin">Disable Pin</string>
 
     <!-- Buttons text -->
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
     <string name="submit">Submit</string>
     <string name="share">Share</string>
     <string name="save">Save</string>
