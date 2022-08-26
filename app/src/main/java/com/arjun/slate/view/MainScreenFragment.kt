@@ -33,12 +33,23 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
         binding.textsListRecyclerView.adapter = adapter
 
         sharedViewModel.allTexts.observe(viewLifecycleOwner) { list ->
-            list?.let {
-                adapter.updateList(it)
+            if (list.isEmpty()) {
+                binding.textsListRecyclerView.visibility = View.GONE
+                binding.emptyListLayout.visibility = View.VISIBLE
+            } else {
+                list?.let {
+                    adapter.updateList(it)
+                }
+                binding.emptyListLayout.visibility = View.GONE
+                binding.textsListRecyclerView.visibility = View.VISIBLE
             }
         }
 
         binding.addTextButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainScreenFragment_to_addTextFragment)
+        }
+
+        binding.addTextFAB.setOnClickListener {
             findNavController().navigate(R.id.action_mainScreenFragment_to_addTextFragment)
         }
 
@@ -61,12 +72,12 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (dy > 0) {
-                    if (binding.addTextButton.isShown) {
-                        binding.addTextButton.hide()
+                    if (binding.addTextFAB.isShown) {
+                        binding.addTextFAB.hide()
                     }
                 } else if (dy < 0) {
-                    if (!binding.addTextButton.isShown) {
-                        binding.addTextButton.show()
+                    if (!binding.addTextFAB.isShown) {
+                        binding.addTextFAB.show()
                     }
                 }
             }

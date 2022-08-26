@@ -10,12 +10,14 @@
         <entry key="app/src/main/res/drawable/ic_check.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_create.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.134" />
+        <entry key="app/src/main/res/drawable/ic_guy_walking_with_dog_in_the_park.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/ic_info.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_more.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_share.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/ic_splash_icon.xml" value="0.1445" />
+        <entry key="app/src/main/res/drawable/ic_thinking.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/ic_upward.xml" value="0.134" />
         <entry key="app/src/main/res/drawable/splash_image.xml" value="0.1445" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.1415" />
@@ -26,7 +28,7 @@
         <entry key="app/src/main/res/layout/fragment_about_app.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_add_text.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_enter_pin.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_main_screen.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_main_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_password.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_set_password.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_set_pin.xml" value="0.1" />

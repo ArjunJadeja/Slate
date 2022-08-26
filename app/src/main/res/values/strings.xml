@@ -34,5 +34,6 @@
     <!-- Icons description -->
     <string name="lock_icon">Lock icon</string>
     <string name="app_icon">App icon</string>
+    <string name="nothing_to_show">Nothing to show</string>
 
 </resources>

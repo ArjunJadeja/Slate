@@ -39,9 +39,49 @@
         app:layout_constraintTop_toBottomOf="@id/appBarLayout"
         tools:listitem="@layout/text_list" />
 
-    <!-- Add text -->
+    <!-- Empty text list layout -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/emptyListLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Nothing to show illustration -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/nothingToShowImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_illustration" />
+
+        <!-- Nothing to show textView -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nothingToShowTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/nothing_to_show" />
+
+        <!-- Add text button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/add_text" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Add text FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addTextButton"
+        android:id="@+id/addTextFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_big"
