@@ -34,6 +34,9 @@
     <!-- Icons description -->
     <string name="lock_icon">Lock icon</string>
     <string name="app_icon">App icon</string>
+
+    <!-- Dialogs -->
     <string name="nothing_to_show">Nothing to show</string>
+    <string name="return_to_top">Return to Top</string>
 
 </resources>

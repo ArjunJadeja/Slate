@@ -28,7 +28,7 @@
         <entry key="app/src/main/res/layout/fragment_about_app.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_add_text.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_enter_pin.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_main_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_main_screen.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_password.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_set_password.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_set_pin.xml" value="0.1" />

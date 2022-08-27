@@ -53,6 +53,11 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
             findNavController().navigate(R.id.action_mainScreenFragment_to_addTextFragment)
         }
 
+        binding.scrollToTopButton.setOnClickListener {
+            binding.textsListRecyclerView.smoothScrollToPosition(0)
+            binding.scrollToTopButton.visibility = View.GONE
+        }
+
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.lock -> {
@@ -67,17 +72,19 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen), INotesRVAdap
             }
         }
 
-        // Hiding FAB on scrolling
+        // Recyclerview scrolling
         binding.textsListRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (dy > 0) {
                     if (binding.addTextFAB.isShown) {
                         binding.addTextFAB.hide()
+                        binding.scrollToTopButton.visibility = View.VISIBLE
                     }
                 } else if (dy < 0) {
                     if (!binding.addTextFAB.isShown) {
                         binding.addTextFAB.show()
+                        binding.scrollToTopButton.visibility = View.GONE
                     }
                 }
             }

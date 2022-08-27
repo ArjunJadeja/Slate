@@ -26,6 +26,19 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- Scroll to Top button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scrollToTopButton"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/return_to_top"
+        android:visibility="gone"
+        app:icon="@drawable/ic_upward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
     <!-- Texts list -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/textsListRecyclerView"
