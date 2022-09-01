@@ -19,6 +19,7 @@ class TextRVAdapter(private val context: Context, private val listener: INotesRV
     inner class TextViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.text)
         val postTime: TextView = itemView.findViewById(R.id.postingTimeTextView)
+        val deleteButton: MaterialButton = itemView.findViewById(R.id.deleteTextButton)
         val shareButton: MaterialButton = itemView.findViewById(R.id.shareTextButton)
     }
 
@@ -27,7 +28,10 @@ class TextRVAdapter(private val context: Context, private val listener: INotesRV
             LayoutInflater.from(context).inflate(R.layout.text_list, parent, false)
         )
         viewHolder.shareButton.setOnClickListener {
-            listener.onItemClicked(textsList[viewHolder.adapterPosition])
+            listener.shareTextClicked(textsList[viewHolder.adapterPosition])
+        }
+        viewHolder.deleteButton.setOnClickListener {
+            listener.deleteTextClicked(textsList[viewHolder.adapterPosition])
         }
         return viewHolder
     }
@@ -36,6 +40,9 @@ class TextRVAdapter(private val context: Context, private val listener: INotesRV
         val currentText = textsList[position]
         holder.textView.text = currentText.text
         holder.postTime.text = PostingTimeFormat.getPostTime(currentText.postingTime)
+        if (PostingTimeFormat.textDeletable(currentText.postingTime) == "NO") {
+            holder.deleteButton.visibility = View.GONE
+        }
     }
 
     override fun getItemCount(): Int {
@@ -51,5 +58,6 @@ class TextRVAdapter(private val context: Context, private val listener: INotesRV
 }
 
 interface INotesRVAdapter {
-    fun onItemClicked(text: Text)
+    fun shareTextClicked(text: Text)
+    fun deleteTextClicked(text: Text)
 }

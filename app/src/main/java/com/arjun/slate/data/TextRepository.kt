@@ -9,4 +9,8 @@ class TextRepository(private val textDao: TextDao) {
     fun insert(text: Text) {
         textDao.insert(text)
     }
+
+    fun delete(text: Text) {
+        textDao.delete(text)
+    }
 }

@@ -1,5 +1,6 @@
 package com.arjun.slate.view
 
+import android.os.Build
 import android.os.Bundle
 import android.view.HapticFeedbackConstants
 import android.view.KeyEvent
@@ -62,9 +63,11 @@ class EnterPinFragment : Fragment(R.layout.fragment_enter_pin) {
     }
 
     private fun hapticFeedback() {
-        activity?.window?.decorView?.performHapticFeedback(
-            HapticFeedbackConstants.CONFIRM,
-            HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
-        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            activity?.window?.decorView?.performHapticFeedback(
+                HapticFeedbackConstants.CONFIRM,
+                HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
+            )
+        }
     }
 }

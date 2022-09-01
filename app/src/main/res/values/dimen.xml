@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--    Font size -->
-    <dimen name="font_small">16sp</dimen>
+    <!-- Font size -->
+    <dimen name="font_smaller">16sp</dimen>
+    <dimen name="font_small">18sp</dimen>
     <dimen name="font_medium">20sp</dimen>
 
-    <!--    Margins -->
+    <!-- Margins -->
     <dimen name="margin_small">12dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="margin_big">24dp</dimen>
     <dimen name="margin_bigger">32dp</dimen>
 
-    <!--    Padding -->
+    <!-- Padding -->
     <dimen name="padding">12dp</dimen>
 
-    <!--    Elevation -->
+    <!-- Elevation -->
     <dimen name="elevation">8dp</dimen>
 
-    <!--    Corner radius -->
+    <!-- Corner radius -->
     <dimen name="corner">8dp</dimen>
 
-    <!--    Integers -->
+    <!-- Stroke -->
+    <dimen name="stroke">1dp</dimen>
+
+    <!-- Integers -->
     <integer name="integer_zero">0</integer>
     <integer name="weight_equal">1</integer>
     <integer name="pin_length">4</integer>

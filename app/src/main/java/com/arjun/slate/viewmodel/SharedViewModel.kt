@@ -30,6 +30,11 @@ class SharedViewModel(application: Application) : AndroidViewModel(application) 
             repository.insert(text)
         }
 
+    fun deleteText(text: Text) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.delete(text)
+        }
+
     // Text DataStore
     private val textDataStoreManager = TextsDataStoreManager(application)
     val readTextFromDataStore = textDataStoreManager.readTextFromDataStore.asLiveData()

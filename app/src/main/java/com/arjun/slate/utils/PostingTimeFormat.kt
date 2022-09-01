@@ -1,6 +1,8 @@
 package com.arjun.slate.utils
 
+import android.annotation.SuppressLint
 import java.text.SimpleDateFormat
+import java.util.*
 
 class PostingTimeFormat {
 
@@ -10,7 +12,8 @@ class PostingTimeFormat {
         private const val MINUTE_MILLIS = 60 * SECOND_MILLIS
         private const val HOUR_MILLIS = 60 * MINUTE_MILLIS
 
-        private val simpleDateFormat = SimpleDateFormat("dd MMM yyyy")
+        @SuppressLint("ConstantLocale")
+        private val simpleDateFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
 
         fun getPostTime(time: Long): String? {
 
@@ -31,6 +34,19 @@ class PostingTimeFormat {
                 (diff / HOUR_MILLIS).toString() + " hours ago"
             } else {
                 simpleDateFormat.format(time)
+            }
+        }
+
+        fun textDeletable(time: Long): String? {
+            val now: Long = System.currentTimeMillis()
+            if (time > now || time <= 0) {
+                return null
+            }
+            val diff = now - time
+            return if (diff / HOUR_MILLIS <= 24) {
+                "YES"
+            } else {
+                "NO"
             }
         }
     }

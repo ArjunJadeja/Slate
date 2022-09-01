@@ -1,1 +1,62 @@
+# Gradle files
+.gradle
+.gradle/
+build/
 /build
+/captures
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+output.json
+release
+.navigation
+
+# IntelliJ
+*.iml
+.idea
+.idea/
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/sonarlint
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+/.idea
+
+# OSX files
+.DS_Store
+
+# Android Profiling
+*.hprof
+
+#NDK
+obj/
+.externalNativeBuild
+
+# Windows thumbnail db
+Thumbs.db
+
+# generated files
+bin/
+gen/
+
+# files for the dex VM
+*.dex
+.cxx
+
+# Java class files
+*.class
