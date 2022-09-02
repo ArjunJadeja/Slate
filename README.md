@@ -5,7 +5,6 @@
 </p>
 
 ## Preview
-
 <p float="left">
   <img src="assets/light_first.jpg" width="265" /> 
   <img src="assets/light_second.jpg" width="265" />
@@ -18,8 +17,10 @@
   <img src="assets/dark_third.jpg" width="265" />
 </p>
 
-## Tech stack
+## Download
+Go to the [Releases](https://github.com/ArjunJadeja/Slate/releases) to download the latest APK.
 
+## Tech stack
 - [Kotlin](https://kotlinlang.org/) - Modern, concise and safe programming language.
 - [Flow](https://developer.android.com/kotlin/flow) - A flow is a stream of data that can be computed asynchronously.
 - [Coroutines](https://developer.android.com/kotlin/coroutines?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCY67QzxA6Cz37o9j1oj1or45ioimGclfE1lR3eeMl3wbH8xQU8mvoQaAiMZEALw_wcB&gclsrc=aw.ds) - A concurrency design pattern to execute code asynchronously.
@@ -37,9 +38,6 @@
 
 ## MAD Score
 ![summary](https://user-images.githubusercontent.com/81246797/181350240-6fad897a-a9ee-4f1c-a4ea-9517ac7d6320.png)
-
-## Download
-Go to the [Releases](https://github.com/ArjunJadeja/Slate/releases) to download the latest APK.
 
 ## License
 ```xml
