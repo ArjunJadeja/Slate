@@ -5,7 +5,6 @@
 </p>
 
 ## Preview
-
 <p float="left">
   <img src="assets/light_first.jpg" width="265" /> 
   <img src="assets/light_second.jpg" width="265" />
@@ -18,8 +17,13 @@
   <img src="assets/dark_third.jpg" width="265" />
 </p>
 
-## Tech stack
+## Demo
+Watch [App Demo](https://www.youtube.com/watch?v=805qEg2nZW8) on YouTube.
 
+## Download
+Go to the [Releases](https://github.com/ArjunJadeja/Slate/releases) to download the latest APK.
+
+## Tech stack
 - [Kotlin](https://kotlinlang.org/) - Modern, concise and safe programming language.
 - [Flow](https://developer.android.com/kotlin/flow) - A flow is a stream of data that can be computed asynchronously.
 - [Coroutines](https://developer.android.com/kotlin/coroutines?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCY67QzxA6Cz37o9j1oj1or45ioimGclfE1lR3eeMl3wbH8xQU8mvoQaAiMZEALw_wcB&gclsrc=aw.ds) - A concurrency design pattern to execute code asynchronously.
@@ -35,13 +39,19 @@
 - [Material You](https://m3.material.io) - Material design components for building View layouts and Animations.
 - [MVVM Architecture](https://developer.android.com/topic/architecture?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCYdinWTjLF0pkdfD6ZyjFwCOjjzX0m7l-tOgXWL-spDqHtFWLgNE80aAoi3EALw_wcB&gclsrc=aw.ds#recommended-app-arch) - MVVM architecture is a Model-View-ViewModel architecture that removes the tight coupling between each component.
 
+## App Architecture
+**Slate** is based on the MVVM architecture and the Repository pattern.
+<p float="left">
+  <img src="assets/SlateArchitecture.png" width="600"/> 
+</p>
+
 ## MAD Score
 ![summary](https://user-images.githubusercontent.com/81246797/181350240-6fad897a-a9ee-4f1c-a4ea-9517ac7d6320.png)
 
-## Download
-Go to the [Releases](https://github.com/ArjunJadeja/Slate/releases) to download the latest APK.
+## Credits
+[Empty List Illustration](https://iconscout.com/illustration/guy-walking-with-dog-in-the-park-2529196) by [IconScout Store](https://iconscout.com/contributors/iconscout).
 
-## License
+# License
 ```xml
 MIT License
 
